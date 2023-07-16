@@ -1,0 +1,3 @@
+Privacy Policy for Sean-ePad:
+
+All user preferences are saved in the user's AppData\Roaming directory and are not shared on the internet.
