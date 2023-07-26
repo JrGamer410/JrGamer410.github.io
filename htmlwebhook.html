@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook Tutorial</title>
+  </head>
+  <body onload = "sendMessage()">
+	You have loaded the secret webook page! Check #general on Sean-e's Server!
+  </body>
+
+  <script>
+    function sendMessage() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1133593084278624298/iQKCntMiRGaldAUKDwY6lCu_zmeHXvuPMNNnUgU1lErjnGYR2p1zKpyyXEZiRjpPwmeb");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params = {
+        username: "jrgamer410.github.io",
+        avatar_url: "",
+        content: "Someone loaded the secret webhook HTML page! :white_check_mark:"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
