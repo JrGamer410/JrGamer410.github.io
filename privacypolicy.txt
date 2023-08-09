@@ -1,3 +1,7 @@
 Privacy Policy for Sean-ePad:
 
 All user preferences are saved in the user's AppData\Roaming directory and are not shared on the internet.
+
+Privacy Policy for Sean-e Bot:
+
+Some data inputed is logged by the console (mainly for debugging), even if the output is sent where only you can see it.
