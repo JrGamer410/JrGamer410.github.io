@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sean-e's Site</title>
+</head>
+<body>
+<script>
+    var blockedUserAgents = ["bytespider","chrome"]; // Add user agents you want to block
+    var userAgent = navigator.userAgent;
+
+    for (var i = 0; i < blockedUserAgents.length; i++) {
+        if (userAgent.includes(blockedUserAgents[i])) {
+            document.write("403: Your client has been denied from accessing this content. If you believe that this is in error, please email seane410@gmail.com");
+            document.body.style.display = "none"; // Hide the content
+            break; // Stop checking once a blocked user agent is found
+        }
+    }
+</script>
+<h1>Whoops!</h1>
+<p>You shouldn't see this...</p>
+</body>
+</html>
