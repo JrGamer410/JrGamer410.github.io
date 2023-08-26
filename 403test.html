@@ -5,8 +5,8 @@
 </head>
 <body>
 <script>
-    var blockedUserAgents = ["bytespider","chrome","safari"]; // Add user agents you want to block
-    var userAgent = navigator.userAgent;
+    const blockedUserAgents = ["bytespider","chrome","safari"]; // Add user agents you want to block
+    const userAgent = navigator.userAgent;
 
     for (var i = 0; i < blockedUserAgents.length; i++) {
         if (userAgent.includes(blockedUserAgents[i])) {
