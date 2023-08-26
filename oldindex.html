@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sean-e's Site</title>
+</head>
+<body>
+<script>
+    var blockedUserAgents = ["bytespider"]; // Add user agents you want to block
+    var userAgent = navigator.userAgent;
+
+    for (var i = 0; i < blockedUserAgents.length; i++) {
+        if (userAgent.includes(blockedUserAgents[i])) {
+            document.write("403: Your client has been denied from accessing this content. If you believe that this is in error, please email seane410@gmail.com");
+            document.body.style.display = "none"; // Hide the content
+            break; // Stop checking once a blocked user agent is found
+        }
+    }
+</script>
+<h1>Welcome to Sean-e's Site!</h1>
+<p>Feel free to look around and click the links below to go to other pages.</p>
+<a href="https://sites.google.com/view/sean-e-site/home">More Stuff on Google Sites</a>
+<a href="https://jrgamer410.github.io/readme.txt">Readme</a>
+<a href="https://jrgamer410.github.io/downloads.html">Downloads</a>
+<a href="https://jrgamer410.github.io/projects.html">Projects</a>
+<a href="https://discord.gg/AqQCA5Nq4r">Discord</a>
+<a href="https://www.youtube.com/channel/UCc3gxEMVZ0C2PuG2oEU1dvA">YouTube</a>
+<a href="https://jrgamer410.github.io/privacypolicy.txt">Privacy Policy</a>
+<a href="https://jrgamer410.github.io/termsofservice.txt">Terms of Service</a>
+<a href="https://jrgamer410.github.io/resources.html">Resources</a>
+<a href="https://discord.com/api/oauth2/authorize?client_id=1094358483039682633&permissions=70368744177655&scope=bot">Sean-e Bot</a>
+</body>
+</html>

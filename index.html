@@ -1,32 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sean-e's Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean-e's Site</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+        * {
+            font-family: 'Rubik', sans-serif;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        body {
+            background-color: #1e1f20;
+            text-align: center;
+            user-select: none;
+        }
+
+        h1 {
+            font-weight: 500;
+            cursor: default;
+        }
+
+        h3 {
+            font-weight: 400;
+            cursor: default;
+            font-size: 18pt;
+        }
+
+        .buttons {
+            margin-top: 100px;
+        }
+
+        .buttons button {
+            width: 400px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            background-color: rgb(13, 16, 32);
+            border: none;
+            outline: none;
+            font-size: 20pt;
+            border-radius: 4px;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: rgb(17, 17, 41);
+        }
+
+        .flex-box {
+            display: flex;
+            position: relative;
+            top: 130px;
+            justify-content: center;
+        }
+
+        .flex-box button {
+            margin-right: 20px;
+            cursor: pointer;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: rgb(13, 16, 32);
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            font-size: 16pt;
+            width: 200px;
+            border-radius: 4px;
+        }
+
+        .flex-box button:hover {
+            background-color: rgb(17, 17, 41);
+        }
+    </style>
 </head>
 <body>
-<script>
-    var blockedUserAgents = ["bytespider"]; // Add user agents you want to block
-    var userAgent = navigator.userAgent;
-
-    for (var i = 0; i < blockedUserAgents.length; i++) {
-        if (userAgent.includes(blockedUserAgents[i])) {
-            document.write("403: Your client has been denied from accessing this content. If you believe that this is in error, please email seane410@gmail.com");
-            document.body.style.display = "none"; // Hide the content
-            break; // Stop checking once a blocked user agent is found
-        }
-    }
-</script>
-<h1>Welcome to Sean-e's Site!</h1>
-<p>Feel free to look around and click the links below to go to other pages.</p>
-<a href="https://sites.google.com/view/sean-e-site/home">More Stuff on Google Sites</a>
-<a href="https://jrgamer410.github.io/readme.txt">Readme</a>
-<a href="https://jrgamer410.github.io/downloads.html">Downloads</a>
-<a href="https://jrgamer410.github.io/projects.html">Projects</a>
-<a href="https://discord.gg/AqQCA5Nq4r">Discord</a>
-<a href="https://www.youtube.com/channel/UCc3gxEMVZ0C2PuG2oEU1dvA">YouTube</a>
-<a href="https://jrgamer410.github.io/privacypolicy.txt">Privacy Policy</a>
-<a href="https://jrgamer410.github.io/termsofservice.txt">Terms of Service</a>
-<a href="https://jrgamer410.github.io/resources.html">Resources</a>
-<a href="https://discord.com/api/oauth2/authorize?client_id=1094358483039682633&permissions=70368744177655&scope=bot">Sean-e Bot</a>
+    <h1>Welcome to Sean-e's Site!</h1>
+    <h3>Feel free to click the buttons below to visit other pages.</h3>
+    <div class="buttons">
+        <button>Misc. Downloads</button><br>
+        <button>Misc. Projects</button><br>
+        <button>Misc. Resources</button><br>
+        <button>Other Stuff</button><br><br><br>
+        <button>Invite our Discord Bot</button><br>
+        <button>Discord Server</button><br>
+        <button>YouTube</button>
+    </div>
+    <div class="flex-box">
+        <button>Privacy Policy</button>
+        <button>Terms of Service</button>
+    </div>
+    <script>
+        // Block Web Crawlers
+        const blockedUserAgents=["bytespider"],userAgent=navigator.userAgent;for(let i=0;i<blockedUserAgents.length;i++)userAgent.includes(blockedUserAgents[i])&&(window.location="about:blank");
+    </script>
+    <script>
+        const importantBtns = document.querySelectorAll(".flex-box button");
+        const buttons = document.querySelectorAll(".buttons button");
+        buttons[0].addEventListener("click", () => {
+            window.open("https://jrgamer410.github.io/downloads.html", "_blank")
+        })
+        buttons[1].addEventListener("click", () => {
+            window.open("https://jrgamer410.github.io/projects.html", "_blank");
+        })
+        buttons[2].addEventListener("click", () => {
+            window.open("https://jrgamer410.github.io/resources.html", "_blank");
+        })
+        buttons[3].addEventListener("click", () => {
+            window.open("https://sites.google.com/view/sean-e-site/home", "_blank");
+        })
+        buttons[4].addEventListener("click", () => {
+            window.open("https://discord.com/api/oauth2/authorize?client_id=1094358483039682633&permissions=70368744177655&scope=bot", "_blank");
+        })
+        buttons[5].addEventListener("click", () => {
+            window.open("https://discord.gg/AqQCA5Nq4r", "_blank");
+        })
+        buttons[6].addEventListener("click", () => {
+            window.open("https://www.youtube.com/@junior-gamer-410tutorials", "_blank");
+        })
+        importantBtns[0].addEventListener("click", () => {
+            alert("Privacy Policy for Sean-ePad: \nAll user preferences are saved in the user's AppData/Roaming directory and are not shared on the internet. \nPrivacy Policy for Sean-e Bot: \nSome data inputed is logged by the console (mainly for debugging), even if the output is sent where only you can see it. Additionally avaliable at https://jrgamer410.github.io/privacypolicy.txt")
+        })
+        importantBtns[1].addEventListener("click", () => {
+            alert("ToS for Sean-e Bot: \nDo not use Sean-e Bot and/or it's functionality for malicious or deadly uses. Additionally avaliable at https://jrgamer410.github.io/termsofservice.txt")
+        })
+    </script>
 </body>
 </html>
