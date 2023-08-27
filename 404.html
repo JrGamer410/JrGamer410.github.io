@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sean-e's Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+        * {
+            color: rgb(250, 250, 250);
+            box-sizing: border-box;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        body {
+            background-color: #222629;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 400;
+        }
+
+        .title {
+            font-size: 50pt;    
+        }
+        
+        .information {
+            position: relative;
+            top: 50px;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            padding: 10px;
+            width: 400px;
+            border-radius: 4px;
+            font-size: 30pt;
+            cursor: pointer;
+            background-color: rgb(14, 14, 31);
+            position: relative;
+            top: 100px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(20, 20, 40)
+        }
+    </style>
 </head>
 <body>
-<h1>Oops!</h1>
-<p>Couldn't find the page you were looking for! Click the link below to return to the home page</p>
-<a href="https://jrgamer410.github.io">Back to Home</a>
+    <h1 class="title">404</h1>
+    <h2 class="information">This error means that we got lost and couldn't find the page. :(<br>You can go back to the main page, or close this page. ¯\_(ツ)_/¯</h2>
+    <button>Teleport Back</button>
+    <script>
+        const btn = document.querySelector("button");
 
+        btn.addEventListener("click", () => {
+            window.open("https://jrgamer410.github.io")
+        })
+    </script>
 </body>
 </html>
